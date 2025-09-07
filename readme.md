@@ -8,7 +8,7 @@ This Python-based tool is designed for transcribing YouTube videos and playlists
 | :------------------------------------------------------: |
 |      _Bulk Transcripts Have Never Been This Easy!_       |
 
-[LinkImg1]: ./readme_image_2.webp
+[LinkImg1]: ./readme_imgs/readme_image_2.webp
 
 ## Functional Overview
 
@@ -60,14 +60,14 @@ This Python-based tool is designed for transcribing YouTube videos and playlists
 | :----------------------------------------: |
 |        _Screenshot of it in Action_        |
 
-[Screenshot1]: ./screenshot.webp
+[Screenshot1]: ./readme_imgs/screenshot.webp
 
 |                 ![Screenshot 1][Screenshot2]                 |       ![Screenshot 2][Screenshot3]        |
 | :----------------------------------------------------------: | :---------------------------------------: |
 | _Paste Transcript Text into the Transcript Reader HTML File_ | _Reader using Dark Mode and Cambria Font_ |
 
-[Screenshot2]: ./transcript_reader_screenshot_1.webp
-[Screenshot3]: ./transcript_reader_screenshot_2.webp
+[Screenshot2]: ./readme_imgs/transcript_reader_screenshot_1.webp
+[Screenshot3]: ./readme_imgs/transcript_reader_screenshot_2.webp
 
 ### Use Cases
 
@@ -306,7 +306,7 @@ See my other open-source projects at [https://github.com/Dicklesworthstone](http
 | :----------------------------------------------------------------------: |
 |       _Take Your YouTube Transcript Addiction to the Next Level!_        |
 
-[IMG_Readme]: ./readme_image_1.webp
+[IMG_Readme]: ./readme_imgs/readme_image_1.webp
 
 ---
 
@@ -318,7 +318,7 @@ Thanks for your interest in my open-source project! I hope you find it useful. Y
 
 The document basically sticks to the same material as discussed in the video, but it sounds much more like a real piece of writing and not just a transcript. It also lets you optionally generate quizzes based on the contents of the document, which can be either multiple choice or short-answer quizzes, and the multiple choice quizzes get turned into interactive HTML files that can be hosted and easily shared, where you can actually take the quiz and it will grade your answers and score the quiz for you.
 
-**[FixMyDocuments.com][LinkFixDocument]** lets you submit any kind of document— PDFs (including scanned PDFs that require OCR), MS Word and Powerpoint files, images, audio files (mp3, m4a, etc.) —and turn them into highly optimized versions in nice markdown formatting, from which HTML and PDF versions are automatically generated. Once converted, you can also edit them directly in the site using the built-in markdown editor, where it saves a running revision history and regenerates the PDF/HTML versions.
+**[FixMyDocuments.com][LinkFixDocument]** lets you submit any kind of document — PDFs (including scanned PDFs that require OCR), MS Word and Powerpoint files, images, audio files (mp3, m4a, etc.) — and turn them into highly optimized versions in nice markdown formatting, from which HTML and PDF versions are automatically generated. Once converted, you can also edit them directly in the site using the built-in markdown editor, where it saves a running revision history and regenerates the PDF/HTML versions.
 
 [LinkFixDocument]: https://fixmydocuments.com/
 
