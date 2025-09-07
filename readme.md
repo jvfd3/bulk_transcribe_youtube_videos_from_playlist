@@ -4,16 +4,18 @@
 
 This Python-based tool is designed for transcribing YouTube videos and playlists into text. It integrates various technologies like faster-whisper for transcription, SpaCy for natural language processing, and CUDA for GPU acceleration, aimed at processing video content efficiently. The script is capable of handling both individual videos and entire playlists, outputting accurate transcripts along with metadata.
 
-| ![Bulk Transcripts Have Never Been This Easy!](https://github.com/Dicklesworthstone/bulk_transcribe_youtube_videos_from_playlist/blob/main/readme_image_2.webp) | 
-|:--:| 
-| *Bulk Transcripts Have Never Been This Easy!* |
+| ![Bulk Transcripts Have Never Been This Easy!][LinkImg1] |
+| :------------------------------------------------------: |
+|      _Bulk Transcripts Have Never Been This Easy!_       |
+
+[LinkImg1]: ./readme_image_2.webp
 
 ## Functional Overview
 
 ### Core Components
 
 - **YouTube Downloading**: Uses `pytube` to download the audio from YouTube videos or playlists.
-- **Audio Transcription**: 
+- **Audio Transcription**:
   - Local Inference: Leverages `faster_whisper.WhisperModel` for converting audio to text. This model is a variant of OpenAI's Whisper designed for speed and accuracy.
   - OpenAI API: Optionally uses the OpenAI API for transcription, though this uses an older and less accurate version of the Whisper model.
 - **NLP Processing**: Optionally, integrates SpaCy for sophisticated sentence splitting, enhancing the readability and structure of the transcript.
@@ -22,39 +24,50 @@ This Python-based tool is designed for transcribing YouTube videos and playlists
 
 ### Detailed Workflow
 
-1. **Initialization**: 
+1. **Initialization**:
+
    - The script starts by determining whether to process a single video or a playlist based on the `convert_single_video` flag.
    - It sets up necessary directories for storing downloaded audio, transcripts, and metadata.
 
-2. **Environment Configuration**: 
+2. **Environment Configuration**:
+
    - Adds CUDA Toolkit path to the system environment for GPU utilization.
    - Configures the number of workers for transcription based on the CPU core count.
 
 3. **Video Processing**:
+
    - For each video in the playlist or the single video, the script downloads the audio.
    - It ensures unique naming for each audio file to avoid overwrites.
 
 4. **Transcription**:
+
    - The audio files are passed to either the local WhisperModel or the OpenAI API for transcription.
    - The script handles GPU acceleration if available, defaulting to CPU otherwise for local inference.
    - Transcription results are split into sentences, either using SpaCy or a custom regex-based splitter.
 
 5. **Metadata Generation**:
+
    - Along with the transcript, the script generates metadata including timestamps and confidence scores for each segment.
 
 6. **Output**:
+
    - The transcripts are saved in plain text, CSV, and JSON formats, providing both the raw transcript and structured metadata.
 
 7. **Display/Read**:
    - To make the transcripts easier to read, an html file is provided, `transcript_reader.html`, which does further clean up and offers a "Reader Mode" where you can choose the font, text size, text width, and toggle dark mode. Simply open this html file in your browser and paste in the transcript text from one of the generated files in the `generated_transcript_combined_texts` folder.
 
-| ![Screenshot of it in Action](https://raw.githubusercontent.com/Dicklesworthstone/bulk_transcribe_youtube_videos_from_playlist/main/screenshot.webp) | 
-|:--:| 
-| *Screenshot of it in Action* |
+| ![Screenshot of it in Action][Screenshot1] |
+| :----------------------------------------: |
+|        _Screenshot of it in Action_        |
 
-| ![Screenshot 1](https://raw.githubusercontent.com/Dicklesworthstone/bulk_transcribe_youtube_videos_from_playlist/main/transcript_reader_screenshot_1.webp) | ![Screenshot 2](https://raw.githubusercontent.com/Dicklesworthstone/bulk_transcribe_youtube_videos_from_playlist/main/transcript_reader_screenshot_2.webp) |
-|:--:|:--:|
-| *Paste Transcript Text into the Transcript Reader HTML File* | *Reader using Dark Mode and Cambria Font* |
+[Screenshot1]: ./screenshot.webp
+
+|                 ![Screenshot 1][Screenshot2]                 |       ![Screenshot 2][Screenshot3]        |
+| :----------------------------------------------------------: | :---------------------------------------: |
+| _Paste Transcript Text into the Transcript Reader HTML File_ | _Reader using Dark Mode and Cambria Font_ |
+
+[Screenshot2]: ./transcript_reader_screenshot_1.webp
+[Screenshot3]: ./transcript_reader_screenshot_2.webp
 
 ### Use Cases
 
@@ -151,7 +164,7 @@ Execute the script with Python:
 python bulk_transcribe_youtube_videos_from_playlist.py
 ```
 
-### Notes:
+### Notes
 
 - If you're using the OpenAI API for transcription, make sure you have a valid API key and sufficient credits.
 - The script will create necessary directories for storing downloaded audio and generated transcripts.
@@ -194,7 +207,7 @@ If you encounter any issues during setup or execution, please check the project'
 ### Main Execution
 
 - The script's main execution starts in the `__main__` block, where it selects the URL to process (single video or playlist) and initiates the `process_video_or_playlist` coroutine.
-- **Concurrent Downloads and Transcription**: `process_video_or_playlist` handles the asynchronous downloading and transcription of videos. It creates a semaphore to limit the number of simultaneous downloads based on `max_simultaneous_youtube_downloads`. 
+- **Concurrent Downloads and Transcription**: `process_video_or_playlist` handles the asynchronous downloading and transcription of videos. It creates a semaphore to limit the number of simultaneous downloads based on `max_simultaneous_youtube_downloads`.
 
 ## Whisper Model Configuration
 
@@ -289,18 +302,24 @@ See my other open-source projects at [https://github.com/Dicklesworthstone](http
 - [SQLAlchemy Data Model Visualizer](https://github.com/Dicklesworthstone/sqlalchemy_data_model_visualizer)
 - [Llama2 Aided Tesseract OCR](https://github.com/Dicklesworthstone/llama2_aided_tesseract)
 
-| ![Take Your YouTube Transcript Addiction to the Next Level!](https://github.com/Dicklesworthstone/bulk_transcribe_youtube_videos_from_playlist/blob/main/readme_image_1.webp) | 
-|:--:| 
-| *Take Your YouTube Transcript Addiction to the Next Level!* |
+| ![Take Your YouTube Transcript Addiction to the Next Level!][IMG_Readme] |
+| :----------------------------------------------------------------------: |
+|       _Take Your YouTube Transcript Addiction to the Next Level!_        |
+
+[IMG_Readme]: ./readme_image_1.webp
 
 ---
 
 Thanks for your interest in my open-source project! I hope you find it useful. You might also find my commercial web apps useful, and I would really appreciate it if you checked them out:
 
-**[YoutubeTranscriptOptimizer.com](https://youtubetranscriptoptimizer.com)** makes it really quick and easy to paste in a YouTube video URL and have it automatically generate not just a really accurate direct transcription, but also a super polished and beautifully formatted written document that can be used independently of the video.
+**[YoutubeTranscriptOptimizer.com][LinkTranscriptOptimizer]** makes it really quick and easy to paste in a YouTube video URL and have it automatically generate not just a really accurate direct transcription, but also a super polished and beautifully formatted written document that can be used independently of the video.
+
+[LinkTranscriptOptimizer]: https://youtubetranscriptoptimizer.com
 
 The document basically sticks to the same material as discussed in the video, but it sounds much more like a real piece of writing and not just a transcript. It also lets you optionally generate quizzes based on the contents of the document, which can be either multiple choice or short-answer quizzes, and the multiple choice quizzes get turned into interactive HTML files that can be hosted and easily shared, where you can actually take the quiz and it will grade your answers and score the quiz for you.
 
-**[FixMyDocuments.com](https://fixmydocuments.com/)** lets you submit any kind of document— PDFs (including scanned PDFs that require OCR), MS Word and Powerpoint files, images, audio files (mp3, m4a, etc.) —and turn them into highly optimized versions in nice markdown formatting, from which HTML and PDF versions are automatically generated. Once converted, you can also edit them directly in the site using the built-in markdown editor, where it saves a running revision history and regenerates the PDF/HTML versions.
+**[FixMyDocuments.com][LinkFixDocument]** lets you submit any kind of document— PDFs (including scanned PDFs that require OCR), MS Word and Powerpoint files, images, audio files (mp3, m4a, etc.) —and turn them into highly optimized versions in nice markdown formatting, from which HTML and PDF versions are automatically generated. Once converted, you can also edit them directly in the site using the built-in markdown editor, where it saves a running revision history and regenerates the PDF/HTML versions.
+
+[LinkFixDocument]: https://fixmydocuments.com/
 
 In addition to just getting the optimized version of the document, you can also generate many other kinds of "derived documents" from the original: interactive multiple-choice quizzes that you can actually take and get graded on; slick looking presentation slides as PDF or HTML (using LaTeX and Reveal.js), an in-depth summary, a concept mind map (using Mermaid diagrams) and outline, custom lesson plans where you can select your target audience, a readability analysis and grade-level versions of your original document (good for simplifying concepts for students), Anki Flashcards that you can import directly into the Anki app or use on the site in a nice interface, and more.
